@@ -1,0 +1,26 @@
+一物理像素
+    1.分割线的
+        高度设置1px
+        @media only screen and (-webkit-device-pixel-ratio:2){
+            div {
+                transform:scaleY(.5)
+            }
+        }
+        @media only screen and (-webkit-device-pixel-ratio:3){
+            div {
+                transform:scaleY(.3333333333333)
+            }
+        }
+    2.其他盒子的
+        使用伪元素before
+            伪元素高度设置为1px
+            @media only screen and (-webkit-device-pixel-ratio:2){
+                div::before {
+                    transform:scaleY(.5)
+                }
+            }
+            @media only screen and (-webkit-device-pixel-ratio:3){
+                div::before {
+                    transform:scaleY(.3333333333333)
+                }
+            }
